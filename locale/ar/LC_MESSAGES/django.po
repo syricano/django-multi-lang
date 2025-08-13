@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-13 04:05+0200\n"
+"POT-Creation-Date: 2025-08-13 17:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -773,8 +773,8 @@ msgid "Terms"
 msgstr "الشروط"
 
 #: .\templates\partials\navbar.html:8
-msgid "Flomarkt.Shop"
-msgstr "سوق فلوماركيت"
+msgid "My E-Commerce"
+msgstr "متجري"
 
 #: .\templates\partials\navbar.html:14
 msgid "Toggle navigation"

@@ -760,8 +760,8 @@ msgid "Terms"
 msgstr ""
 
 #: .\templates\partials\navbar.html:8
-msgid "Flomarkt.Shop"
-msgstr ""
+msgid "My E-Commerce"
+msgstr "Mein E-Commerce"
 
 #: .\templates\partials\navbar.html:14
 msgid "Toggle navigation"
@@ -773,7 +773,7 @@ msgstr ""
 
 #: .\templates\partials\navbar.html:45
 msgid "Search our site"
-msgstr ""
+msgstr "Suchen"
 
 #: .\templates\partials\navbar.html:83
 msgid "My Account"
