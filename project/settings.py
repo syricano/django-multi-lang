@@ -30,27 +30,6 @@ CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8000',
     'http://127.0.0.1:8000',
 ]
-
-# Authentication backends
-AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
-    'allauth.account.auth_backends.AuthenticationBackend',
-]
-
-# Allauth account settings
-ACCOUNT_LOGIN_METHODS = {"username", "email"}
-ACCOUNT_SIGNUP_FIELDS = ["username*", "password1*", "password2*", "email"]
-ACCOUNT_EMAIL_VERIFICATION = "none"
-ACCOUNT_SESSION_REMEMBER = True
-ACCOUNT_LOGOUT_ON_GET = True
-
-# Redirects
-LOGIN_REDIRECT_URL = "/profile/"
-LOGOUT_REDIRECT_URL = "/"
-ACCOUNT_LOGOUT_REDIRECT_URL = "/"
-ACCOUNT_LOGOUT_ON_GET = True
-MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
-
 # Installed apps
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -65,11 +44,11 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    # Google provider will be added in step 2:
-    # 'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.google',
 
     # Your apps
     'home',
+    'profiles',
 ]
 
 SITE_ID = 1
@@ -120,6 +99,27 @@ TEMPLATES = [
     },
 ]
 
+MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
+
+# Authentication backends
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+# Allauth account settings
+ACCOUNT_LOGIN_METHODS = {"username", "email"}
+ACCOUNT_SIGNUP_FIELDS = ["username*", "password1*", "password2*", "email"]
+ACCOUNT_EMAIL_VERIFICATION = "none"
+ACCOUNT_SESSION_REMEMBER = True
+ACCOUNT_LOGOUT_ON_GET = True
+
+# Redirects
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
+ACCOUNT_LOGOUT_REDIRECT_URL = "/"
+ACCOUNT_LOGOUT_ON_GET = True
+
 WSGI_APPLICATION = 'project.wsgi.application'
 
 # Database (PostgreSQL via DATABASE_URL)
@@ -157,6 +157,9 @@ LANGUAGES = [
 ]
 
 LOCALE_PATHS = [BASE_DIR / "locale"]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 LANGUAGE_COOKIE_NAME = "django_language"
