@@ -32,24 +32,22 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 # Installed apps
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+    # Django
+    'django.contrib.admin','django.contrib.auth','django.contrib.contenttypes',
+    'django.contrib.sessions','django.contrib.messages','django.contrib.staticfiles',
     'django.contrib.sites',
 
-    # Allauth
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
+    # Third-party
+    'allauth','allauth.account','allauth.socialaccount',
     'allauth.socialaccount.providers.google',
+    'crispy_forms','crispy_bootstrap5',
 
-    # Your apps
-    'home',
-    'profiles',
+    # Local apps
+    'home','profiles',
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = ("bootstrap5",)
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 SITE_ID = 1
 

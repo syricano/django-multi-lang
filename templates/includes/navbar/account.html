@@ -4,7 +4,9 @@
      href="#" id="userOptions" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     <i class="bi bi-person-circle fs-5"></i>
     {% if request.user.is_authenticated %}
-      <span class="username-mobile">{{ request.user.username }}</span>
+      <span class="username-mobile">
+        {{ request.user.first_name|default:request.user.username }}
+      </span>
     {% else %}
       {% trans 'My Account' %}
     {% endif %}
